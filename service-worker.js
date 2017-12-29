@@ -1,1 +1,2 @@
-console.log(self);
+console.log('test');
+console.log(this);

@@ -15,9 +15,17 @@
   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
   <script src="scripts/app.js" async></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(function () { console.log("Service Worker Registered"); });
+    }
+  </script>
 </head>
 <frameset resizable="yes" rows="50%,*" onload="init();">
   <frame name="editbox" src="javascript:'';">
     <frame name="dynamicframe" src="javascript:'';">
 </frameset>
+
 </html>
